@@ -3,9 +3,10 @@
 int main ()
 {
   char player_name[32];
-  char weapon;
+  char weapon = "";
+  char ending[] = "And that is the end of Forests and Drakes. Better luck next time.";
 
-  int choice_1, choice_2;
+  int choice_1, choice_2, choice_3;
   int weapon_choice;
   int x = 0;
 
@@ -77,22 +78,27 @@ int main ()
       printf("Out comes a tree ent running towards you. He's got long, dark green branches!\n");
       printf("He's running towards you breaking trees and anything in his path.\n");
       sleep(x);
-      printf("1.  Use your %s.\n", weapon);
+      printf("1.  Use your %c.\n", weapon);
       printf("2.  Roll into a ball and hope he doesn't see you.\n");
       printf("3.  Start to run in the oppposite direction.\n");
       printf("4.  Find some inner magic and throw a fire ball at him.\n");
       printf("What do you do?: ");
+      scanf("%d", &choice_2 );
 
         switch (choice_2)
         {
           case 1:
-
                 if (weapon_choice == 1)
                 {
                   printf("You swing your sword furiously in the direction of the ent. Your close your eyes hoping for the best.\n");
                   printf("--2 minutes later--\n");
                   printf("You look down to see nothing in front of you but a pile of fire wood.\n");
                 }
+                else if (weapon_choice == 2)
+                {
+
+                    }
+
                 else
                 {
                   return 0;
@@ -101,6 +107,31 @@ int main ()
             break;
 
           case 2:
+              printf("You jump down and rll yourself into a samll little ball...\n");
+              printf("The ent goes ruuning right over you and it causes him to trip...\n");
+              printf("He falls head first into a rock.\n");
+              printf("He seems to be knocked out cold.\n");
+              printf("\nDo you:\n");
+              printf("1.  Kill him with your sword.\n");
+              printf("2.  Tap him to wake him up.\n");
+              printf("What do you do?: ");
+              scanf("%d", &choice_3);
+
+                switch (choice_3)
+                {
+                  case 1:
+                    printf("You chop off his head and begin to walk on.\n");
+                  break;
+
+                  case 2:
+                    printf("You tap him and he wakes up.\n");
+                    printf("He swings his arm around resulting in your death.\n");
+                    printf("%s\n", ending);
+
+                  default:
+                    return 0;
+                  break;
+                }
             break;
 
           case 3:
