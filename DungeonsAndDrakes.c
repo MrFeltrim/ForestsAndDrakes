@@ -1,9 +1,10 @@
 #include <stdio.h>
+#include <unistd.h> /*You were missing the libaray for sleep. You can type `man sleep` in order to see*/
 
 int main ()
 {
   char player_name[32];
-  char weapon = "";
+  char *weapon = "Place holder"; /*This can not be an empty string as it is a constant and empty string means nothing*/
   char ending[] = "And that is the end of Forests and Drakes. Better luck next time.";
 
   int choice_1, choice_2, choice_3;
@@ -78,7 +79,7 @@ int main ()
       printf("Out comes a tree ent running towards you. He's got long, dark green branches!\n");
       printf("He's running towards you breaking trees and anything in his path.\n");
       sleep(x);
-      printf("1.  Use your %c.\n", weapon);
+      printf("1.  Use your %s.\n", weapon); /*You are printing a string here and not a character*/
       printf("2.  Roll into a ball and hope he doesn't see you.\n");
       printf("3.  Start to run in the oppposite direction.\n");
       printf("4.  Find some inner magic and throw a fire ball at him.\n");

@@ -1,0 +1,4 @@
+In order to complie your code use
+gcc DungeonsAndDrakes.c
+./a.out  To run it
+the a.out is the excecutable
